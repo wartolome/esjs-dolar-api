@@ -127,7 +127,7 @@ importers:
         specifier: ^1.6.3
         version: 1.6.3(@algolia/client-search@5.17.1)(@types/node@18.19.36)(axios@1.7.2)(postcss@8.4.38)(search-insights@2.14.0)(typescript@5.4.5)
       vitepress-openapi:
-        specifier: ^0.0.3-alpha.72
+        specifier: ^0.0.3-alpha.71
         version: 0.0.3-alpha.72(typescript@5.4.5)(vitepress@1.6.3(@algolia/client-search@5.17.1)(@types/node@18.19.36)(axios@1.7.2)(postcss@8.4.38)(search-insights@2.14.0)(typescript@5.4.5))(vue@3.4.29(typescript@5.4.5))
       vitest:
         specifier: ^0.34.6
@@ -135,9 +135,6 @@ importers:
       vue:
         specifier: ^3.3.4
         version: 3.4.29(typescript@5.4.5)
-      vue-i18n:
-        specifier: ^9.5.0
-        version: 9.13.1(vue@3.4.29(typescript@5.4.5))
       x-satori:
         specifier: 0.1.5
         version: 0.1.5
@@ -5531,6 +5528,7 @@ snapshots:
     dependencies:
       '@intlify/message-compiler': 9.13.1
       '@intlify/shared': 9.13.1
+    optional: true
 
   '@intlify/message-compiler@9.13.1':
     dependencies:
@@ -6316,7 +6314,8 @@ snapshots:
       '@vue/compiler-dom': 3.5.13
       '@vue/shared': 3.5.13
 
-  '@vue/devtools-api@6.6.3': {}
+  '@vue/devtools-api@6.6.3':
+    optional: true
 
   '@vue/devtools-api@7.7.0':
     dependencies:
@@ -10106,6 +10105,7 @@ snapshots:
       '@intlify/shared': 9.13.1
       '@vue/devtools-api': 6.6.3
       vue: 3.4.29(typescript@5.4.5)
+    optional: true
 
   vue@3.4.29(typescript@5.4.5):
     dependencies:

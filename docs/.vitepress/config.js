@@ -1,7 +1,6 @@
 import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { defineConfig, loadEnv } from 'vitepress'
-import vueI18n from '@intlify/unplugin-vue-i18n/vite'
 import { SitemapStream } from 'sitemap'
 import { genjiAttrs } from 'genji-theme-vitepress/config'
 import { generateSidebar } from './sidebar/sidebar.js'
@@ -125,11 +124,6 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [
-      vueI18n({
-        ssr: true,
-      }),
-    ],
     optimizeDeps: {
       include: [
         'genji-theme-vitepress > genji-runtime > esprima',
