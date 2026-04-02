@@ -10,7 +10,11 @@ const props = defineProps({
   },
   githubUrl: {
     type: String,
-    required: true,
+    default: null,
+  },
+  downloadUrl: {
+    type: String,
+    default: null,
   },
 })
 </script>
@@ -29,9 +33,14 @@ const props = defineProps({
         Visitar
       </a>
 
-      <a :href="props.githubUrl" target="_blank" class="button flex justify-center items-center gap-1">
+      <a v-if="props.githubUrl" :href="props.githubUrl" target="_blank" class="button flex justify-center items-center gap-1">
         <span class="i-mdi-github w-5 h-5" />
         Ver en GitHub
+      </a>
+
+      <a v-if="props.downloadUrl" :href="props.downloadUrl" download class="button flex justify-center items-center gap-1" aria-label="Descargar demo">
+        <span class="i-mdi-download w-5 h-5" />
+        Descargar
       </a>
     </div>
   </div>
