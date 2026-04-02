@@ -1,0 +1,86 @@
+/* WP Modal Ads — Frontend Styles */
+
+/* Overlay: full-viewport backdrop */
+.wp-modal-ads-overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 999998;
+	background: rgba(0, 0, 0, 0.80);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	animation: wpModalAdsFadeIn 0.25s ease forwards;
+}
+
+.wp-modal-ads-overlay[hidden] {
+	display: none;
+}
+
+@keyframes wpModalAdsFadeIn {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+
+/* Inner container — sized via JS (vw/vh) */
+.wp-modal-ads-container {
+	position: relative;
+	background: #000;
+	overflow: hidden;
+	box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+	/* Default: 100vw × 100vh (full-screen) */
+	width: 100vw;
+	height: 100vh;
+}
+
+/* Skip button — upper-right corner */
+.wp-modal-ads-skip {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	z-index: 10;
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 8px 14px;
+	background: rgba(0, 0, 0, 0.72);
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.45);
+	border-radius: 4px;
+	font-size: 13px;
+	font-family: sans-serif;
+	line-height: 1;
+	cursor: pointer;
+	transition: background 0.15s, border-color 0.15s;
+}
+
+.wp-modal-ads-skip:focus-visible {
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+}
+
+.wp-modal-ads-skip:not(:disabled):hover {
+	background: rgba(0, 0, 0, 0.90);
+	border-color: rgba(255, 255, 255, 0.80);
+}
+
+.wp-modal-ads-skip:disabled {
+	cursor: not-allowed;
+	opacity: 0.65;
+}
+
+.wp-modal-ads-skip[hidden] {
+	display: none;
+}
+
+.wp-modal-ads-skip-countdown {
+	font-weight: 700;
+}
+
+/* Iframe fills the container */
+.wp-modal-ads-iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+	display: block;
+}

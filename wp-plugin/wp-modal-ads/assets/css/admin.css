@@ -1,0 +1,18 @@
+/* WP Modal Ads — Admin Panel Styles */
+
+.wp-modal-ads-admin h1 {
+	margin-bottom: 16px;
+}
+
+.wp-modal-ads-admin .form-table th {
+	width: 260px;
+}
+
+.wp-modal-ads-admin input[type="number"].small-text {
+	width: 80px;
+}
+
+/* Highlight the preview button */
+#wp-modal-ads-preview-btn {
+	margin-top: 8px;
+}
